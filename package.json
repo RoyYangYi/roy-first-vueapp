@@ -14,11 +14,10 @@
     "vue": "2.5.13"
   },
   "devDependencies": {
-    "webpack-merge": "^4.2.1",
     "autoprefixer": "7.2.3",
     "babel-core": "6.26.0",
     "babel-helper-vue-jsx-merge-props": "2.0.3",
-    "babel-loader": "7.1.2",
+    "babel-loader": "^7.1.5",
     "babel-plugin-syntax-jsx": "6.18.0",
     "babel-plugin-transform-vue-jsx": "3.5.0",
     "babel-preset-env": "1.6.1",
@@ -36,7 +35,8 @@
     "vue-loader": "13.6.0",
     "vue-template-compiler": "2.5.13",
     "webpack": "3.10.0",
-    "webpack-dev-server": "2.9.7"
+    "webpack-dev-server": "2.9.7",
+    "webpack-merge": "^4.2.1"
   },
   "repository": {
     "type": "git",
