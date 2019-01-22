@@ -2,6 +2,7 @@ const path = require('path')
 const HTMLPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const ExtractPlugin = require('extract-text-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -42,7 +43,8 @@ const config = {
         NODE_ENV: isDev ? '"development"' : '"production"'
       }
     }),
-    new HTMLPlugin()
+    new HTMLPlugin(),
+    new VueLoaderPlugin()
   ]
 }
 
@@ -72,7 +74,7 @@ if (isDev) {
   }
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   )
 } else {
   config.entry = {
@@ -105,7 +107,7 @@ if (isDev) {
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
-    })
+    }),
   )
 }
 
